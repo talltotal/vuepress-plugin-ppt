@@ -1,0 +1,29 @@
+{
+  "name": "@talltotal/vuepress-plugin-ppt",
+  "version": "0.0.1",
+  "description": "ppt plugin for vuepress",
+  "main": "index.js",
+  "author": "talltotal",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talltotal/vuepress-plugin-ppt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/talltotal/vuepress-plugin-ppt/issues"
+  },
+  "homepage": "https://github.com/talltotal/vuepress-plugin-ppt#readme",
+  "keywords": [
+    "ppt",
+    "vue",
+    "vuepress",
+    "vuepress-plugin"
+  ],
+  "dependencies": {
+    "@vuepress/shared-utils": "^1.0.0-alpha.44",
+    "markdown-it-container": "^2.0.0"
+  },
+  "devDependencies": {
+    "@vuepress/core": "^1.0.0-alpha.44"
+  }
+}
