@@ -1,15 +1,47 @@
 ---
-home: true
-logo: /imgs/logo.png
-logoColor: rgba(245,244,239,1)
-subline: you get what you sow.
-actionText: 进入文档1
-actionLink: /docs/
-footer: All Rights Reserved. © 2018, talltotal.
+navbar: false
+ppt:
+    showPage: true
 ---
 
-::: danger
-dsf
+<div style="margin-top: 0;height: calc(100vh - 8rem);">
+
+::: ppt
+
+# [@talltotal/vuepress-plugin-ppt](https://github.com/talltotal/vuepress-plugin-ppt)
+
+----
+
+## install
+```bash
+yarn add -D @talltotal/vuepress-plugin-ppt
+# OR npm install -D @talltotal/vuepress-plugin-ppt
+```
+
+----
+
+## Usage
+### 在 `config.js` 中引入
+```js
+module.exports = {
+    plugins: ['@talltotal/vuepress-plugin-ppt'] 
+}
+```
+
+----
+
+## Usage
+### 在 md 文档中使用
+1. 在 `frontmatter` 增加 ppt 组件的配置，以及一些隐藏其他页面元素的设置
+    - `showPage` Boolean 是否显示分页下标
+    - `listStyle` Object 页面自定义样式，以页码为key
+2. 正文部分用 `::: ppt` + `:::` 包裹，中间以 `----` 为分页标识
+
+> 另外，最好在组件外增个容器或自定义布局
+> 
+> Additionally, you can add a container or custom layout outside the component
+
 :::
 
-dsfas
+</div>
+

@@ -49,10 +49,11 @@ export default {
     },
     data () {
         return {
-            currentPage: parseInt(getHash(), 10) || 1,
+            currentPage: 1,
         }
     },
     mounted() {
+        this.currentPage = parseInt(getHash(), 10) || 1
         window.addEventListener('keydown', this.keydown)
         window.addEventListener('hashchange', this.hashChange)
     },
@@ -115,5 +116,8 @@ export default {
     background-position: center;
     background-color: #fff;
     text-shadow: 0 0 .25em #ccc;
+}
+.ppt pre {
+    text-shadow: initial;
 }
 </style>

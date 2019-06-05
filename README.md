@@ -7,22 +7,32 @@ yarn add -D @talltotal/vuepress-plugin-ppt
 ```
 
 ## Usage
+### 在 `config.js` 中引入
 ```js
 module.exports = {
-    plugins: ['@vuepress/back-to-top'] 
+    plugins: ['@talltotal/vuepress-plugin-ppt'] 
 }
 ```
 
-另外，最好在组件外增个容器或自定义布局（Additionally, you can add a container or custom layout outside the component）
+
+### 在 md 文档中使用
+1. 在 `frontmatter` 增加 ppt 组件的配置，以及一些隐藏其他页面元素的设置
+    - `showPage` Boolean 是否显示分页下标
+    - `listStyle` Object 页面自定义样式，以页码为key
+2. 正文部分用 `::: ppt` + `:::` 包裹，中间以 `----` 为分页标识
+
+> 另外，最好在组件外增个容器或自定义布局
+> 
+> Additionally, you can add a container or custom layout outside the component
 
 ```md
 ---
 navbar: false
-# ppt 组件配置（ppt options）
+# ppt options
 ppt:
-    # 是否显示分页下标（whether to display pagination）
+    # whether to display pagination
     showPage: true
-    # 页面自定义样式，以页码为key（custom page-style with page number as 'key'）
+    # custom page-style with page number as 'key'
     listStyle:
         1: 'background-image: url(/imgs/bg.jpg)'
 ---
