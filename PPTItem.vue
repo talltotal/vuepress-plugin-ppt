@@ -1,6 +1,6 @@
 <template>
     <transition name="ppt">
-        <div v-show="currentPage === index" class="ppt-item" :style="style">
+        <div v-show="list.length && (currentPage === index)" class="ppt-item" :style="style">
             <div class="ppt-content">
                 <slot />
             </div>
@@ -49,7 +49,6 @@ export default {
 </script>
 
 <style>
-
 .ppt-enter,
 .ppt-leave-to {
     opacity: 0;

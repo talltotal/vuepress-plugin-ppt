@@ -21,7 +21,7 @@ module.exports = {
     - `listStyle` Object 页面自定义样式，以页码为key
 2. 正文部分用 `::: ppt` + `:::` 包裹，中间以 `----` 为分页标识
 
-> 另外，最好在组件外增个容器或自定义布局
+> 另外，最好在组件外加个容器或自定义布局
 > 
 > Additionally, you can add a container or custom layout outside the component
 
