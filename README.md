@@ -1,4 +1,4 @@
-# [@talltotal/vuepress-plugin-ppt](https://github.com/talltotal/vuepress-plugin-ppt)
+# [@talltotal/vuepress-plugin-ppt](https://talltotal.github.io/vuepress-plugin-ppt/)
 
 ## install
 ```bash
