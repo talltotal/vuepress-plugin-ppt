@@ -1,5 +1,10 @@
 <template>
-    <div class="ppt">
+    <div
+        class="ppt"
+        @touchstart.stop="onTouchStart"
+        @scroll.capture="onScroll"
+        @touchend.stop="onTouchEnd"
+    >
         <slot />
     </div>
 </template>
@@ -62,6 +67,28 @@ export default {
         window.removeEventListener('hashchange', this.hashChange)
     },
     methods: {
+        // side swipe
+        onTouchStart (e) {
+            this.touchStart = {
+                x: e.changedTouches[0].clientX,
+                y: e.changedTouches[0].clientY,
+            }
+        },
+        onScroll () {
+            this.touchStart = null
+        },
+        onTouchEnd (e) {
+            if (!this.touchStart) return
+            const dx = e.changedTouches[0].clientX - this.touchStart.x
+            const dy = e.changedTouches[0].clientY - this.touchStart.y
+            if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+                if (dx > 0) {
+                    this.goPrev()
+                } else {
+                    this.goNext()
+                }
+            }
+        },
         goto(page) {
             const { currentPage, slides } = this;
             const length = slides.length;
@@ -119,5 +146,9 @@ export default {
 }
 .ppt pre {
     text-shadow: initial;
+}
+.ppt .extra-class {
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
 }
 </style>

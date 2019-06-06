@@ -3,29 +3,37 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>VuePress</title>
+    <title>vuepress-plugin-ppt</title>
     <meta name="description" content="">
     
     
-    <link rel="preload" href="/vuepress-plugin-ppt/assets/css/0.styles.f385ac1a.css" as="style"><link rel="preload" href="/vuepress-plugin-ppt/assets/js/app.a196bc66.js" as="script"><link rel="preload" href="/vuepress-plugin-ppt/assets/js/2.36662565.js" as="script"><link rel="preload" href="/vuepress-plugin-ppt/assets/js/5.0902025d.js" as="script"><link rel="prefetch" href="/vuepress-plugin-ppt/assets/js/3.054aee29.js"><link rel="prefetch" href="/vuepress-plugin-ppt/assets/js/4.ec03d993.js"><link rel="prefetch" href="/vuepress-plugin-ppt/assets/js/6.84ce8a09.js">
-    <link rel="stylesheet" href="/vuepress-plugin-ppt/assets/css/0.styles.f385ac1a.css">
+    <link rel="preload" href="/vuepress-plugin-ppt/assets/css/0.styles.8a5729bb.css" as="style"><link rel="preload" href="/vuepress-plugin-ppt/assets/js/app.4d638bb3.js" as="script"><link rel="preload" href="/vuepress-plugin-ppt/assets/js/2.36662565.js" as="script"><link rel="preload" href="/vuepress-plugin-ppt/assets/js/5.9559e975.js" as="script"><link rel="prefetch" href="/vuepress-plugin-ppt/assets/js/3.054aee29.js"><link rel="prefetch" href="/vuepress-plugin-ppt/assets/js/4.ec03d993.js"><link rel="prefetch" href="/vuepress-plugin-ppt/assets/js/6.84ce8a09.js">
+    <link rel="stylesheet" href="/vuepress-plugin-ppt/assets/css/0.styles.8a5729bb.css">
   </head>
   <body>
     <div id="app" data-server-rendered="true"><div class="theme-container no-navbar no-sidebar"><!----> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><div style="margin-top:0;height:calc(100vh - 8rem);"><div class="ppt"><div class="ppt-item"><div class="ppt-content"><h1 id="talltotal-vuepress-plugin-ppt"><a href="#talltotal-vuepress-plugin-ppt" aria-hidden="true" class="header-anchor">#</a> <a href="https://github.com/talltotal/vuepress-plugin-ppt" target="_blank" rel="noopener noreferrer">@talltotal/vuepress-plugin-ppt<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h1></div> <div class="ppt-page">
-            1 / 4
+            1 / 7
         </div></div><div class="ppt-item"><div class="ppt-content"><h2 id="install"><a href="#install" aria-hidden="true" class="header-anchor">#</a> install</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> <span class="token function">add</span> -D @talltotal/vuepress-plugin-ppt
 <span class="token comment"># OR npm install -D @talltotal/vuepress-plugin-ppt</span>
 </code></pre></div></div> <div class="ppt-page">
-            1 / 4
+            1 / 7
         </div></div><div class="ppt-item"><div class="ppt-content"><h2 id="usage"><a href="#usage" aria-hidden="true" class="header-anchor">#</a> Usage</h2> <h3 id="在-config-js-中引入"><a href="#在-config-js-中引入" aria-hidden="true" class="header-anchor">#</a> 在 <code>config.js</code> 中引入</h3> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
     plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'@talltotal/vuepress-plugin-ppt'</span><span class="token punctuation">]</span> 
 <span class="token punctuation">}</span>
 </code></pre></div></div> <div class="ppt-page">
-            1 / 4
+            1 / 7
         </div></div><div class="ppt-item"><div class="ppt-content"><h2 id="usage-2"><a href="#usage-2" aria-hidden="true" class="header-anchor">#</a> Usage</h2> <h3 id="在-md-文档中使用"><a href="#在-md-文档中使用" aria-hidden="true" class="header-anchor">#</a> 在 md 文档中使用</h3> <ol><li>在 <code>frontmatter</code> 增加 ppt 组件的配置，以及一些隐藏其他页面元素的设置
-<ul><li><code>showPage</code> Boolean 是否显示分页下标</li> <li><code>listStyle</code> Object 页面自定义样式，以页码为key</li></ul></li> <li>正文部分用 <code>::: ppt</code> + <code>:::</code> 包裹，中间以 <code>----</code> 为分页标识</li></ol> <blockquote><p>另外，最好在组件外增个容器或自定义布局</p> <p>Additionally, you can add a container or custom layout outside the component</p></blockquote></div> <div class="ppt-page">
-            1 / 4
+<ul><li><code>showPage</code> Boolean 是否显示分页下标</li> <li><code>listStyle</code> Object 页面自定义样式，以页码为key</li></ul></li></ol></div> <div class="ppt-page">
+            1 / 7
+        </div></div><div class="ppt-item"><div class="ppt-content"><h2 id="usage-3"><a href="#usage-3" aria-hidden="true" class="header-anchor">#</a> Usage</h2> <h3 id="在-md-文档中使用-2"><a href="#在-md-文档中使用-2" aria-hidden="true" class="header-anchor">#</a> 在 md 文档中使用</h3> <ol start="2"><li>正文部分用 <code>::: ppt</code> + <code>:::</code> 包裹，中间以 <code>----</code> 为分页标识</li></ol></div> <div class="ppt-page">
+            1 / 7
+        </div></div><div class="ppt-item"><div class="ppt-content"><h2 id="usage-4"><a href="#usage-4" aria-hidden="true" class="header-anchor">#</a> Usage</h2> <h3 id="在-md-文档中使用-3"><a href="#在-md-文档中使用-3" aria-hidden="true" class="header-anchor">#</a> 在 md 文档中使用</h3> <blockquote><p>另外，最好在组件外加个容器或自定义布局</p> <p>Additionally, you can add a container or custom layout outside the component</p></blockquote></div> <div class="ppt-page">
+            1 / 7
+        </div></div><div class="ppt-item"><div class="ppt-content"><h2 id="usage-5"><a href="#usage-5" aria-hidden="true" class="header-anchor">#</a> Usage</h2> <h3 id="操作"><a href="#操作" aria-hidden="true" class="header-anchor">#</a> 操作</h3> <ul><li>键盘
+<ul><li>⬆️⬅️：上一张</li> <li>⬇️➡️：下一张</li></ul></li> <li>手势
+<ul><li>向左划：上一张</li> <li>向右划：下一张</li></ul></li></ul></div> <div class="ppt-page">
+            1 / 7
         </div></div></div></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
-    <script src="/vuepress-plugin-ppt/assets/js/app.a196bc66.js" defer></script><script src="/vuepress-plugin-ppt/assets/js/2.36662565.js" defer></script><script src="/vuepress-plugin-ppt/assets/js/5.0902025d.js" defer></script>
+    <script src="/vuepress-plugin-ppt/assets/js/app.4d638bb3.js" defer></script><script src="/vuepress-plugin-ppt/assets/js/2.36662565.js" defer></script><script src="/vuepress-plugin-ppt/assets/js/5.9559e975.js" defer></script>
   </body>
 </html>
