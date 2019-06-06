@@ -21,6 +21,11 @@ export default {
         }
     },
     name: 'PptItem',
+    data () {
+        return {
+            index: -1,
+        }
+    },
     computed: {
         list () {
             return this.$parent.slides
@@ -31,19 +36,12 @@ export default {
         currentPage () {
             return this.$parent.$data.currentPage
         },
-        index () {
-            let index = 0
-            this.list.forEach((item, i) => {
-                if (item.child === this) {
-                    index = i
-                    return false
-                }
-            })
-            return index + 1
-        },
         isShowPage () {
             return this.$parent.isShowPage
         }
+    },
+    created () {
+        this.index = this.$parent.__index ? ++this.$parent.__index : (this.$parent.__index = 1)
     }
 }
 </script>
