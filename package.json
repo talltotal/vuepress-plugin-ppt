@@ -1,6 +1,6 @@
 {
   "name": "@talltotal/vuepress-plugin-ppt",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "ppt plugin for vuepress",
   "main": "index.js",
   "author": "talltotal",

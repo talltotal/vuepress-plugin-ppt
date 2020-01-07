@@ -141,8 +141,6 @@ export default {
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-color: #fff;
-    text-shadow: 0 0 .25em #ccc;
 }
 .ppt pre {
     text-shadow: initial;
