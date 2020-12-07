@@ -30,8 +30,11 @@ module.exports = {
 navbar: false
 # ppt options
 ppt:
+    title: '@talltotal/vuepress-plugin-ppt'
     # whether to display pagination
     showPage: true
+    # custom style apply on each page
+    baseStyle: 'text-shadow: 0 0 2px rgba(0,0,0,0.2);'
     # custom page-style with page number as 'key'
     listStyle:
         1: 'background-image: url(/imgs/bg.jpg)'

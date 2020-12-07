@@ -5,6 +5,10 @@
   "main": "index.js",
   "author": "talltotal",
   "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev test",
+    "docs": "vuepress build test -d docs"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/talltotal/vuepress-plugin-ppt.git"

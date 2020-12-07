@@ -1,6 +1,8 @@
 ---
 navbar: false
 ppt:
+    title: 'PPT'
+    baseStyle: 'text-shadow: 0 0 2px rgba(0,0,0,0.2);'
     showPage: true
 ---
 

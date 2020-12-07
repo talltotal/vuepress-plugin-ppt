@@ -4,8 +4,10 @@
         @touchstart.stop="onTouchStart"
         @scroll.capture="onScroll"
         @touchend.stop="onTouchEnd"
+        :style="baseStyle"
     >
         <slot />
+        <h1 v-if="title" class="ppt-title">{{ title }}</h1>
     </div>
 </template>
 
@@ -28,6 +30,14 @@ export default {
         }
     },
     computed: {
+        title () {
+            const { ppt = {} } = this.$page.frontmatter
+            return ppt.title
+        },
+        baseStyle () {
+            const { ppt = {} } = this.$page.frontmatter
+            return ppt.baseStyle
+        },
         slides () {
             return this.$slots.default.filter(item => item.tag)
         },
@@ -100,12 +110,25 @@ export default {
                 this.currentPage = page;
             }
         },
+        pageTo(page) {
+            const { currentPage, slides } = this;
+            const length = slides.length;
+            let p
+            if (page >= length) {
+                p = length;
+            } else if (page <= 1) {
+                p = 1;
+            } else {
+                p = page;
+            }
+            location.hash = `#${p}`
+        },
         // shortcuts
         goNext() {
-            this.goto(this.currentPage + 1);
+            this.pageTo(this.currentPage + 1);
         },
         goPrev() {
-            this.goto(this.currentPage - 1);
+            this.pageTo(this.currentPage - 1);
         },
         hashChange () {
             this.goto(parseInt(getHash(), 10))
@@ -148,5 +171,10 @@ export default {
 .ppt .extra-class {
     max-width: 100%;
     -webkit-overflow-scrolling: touch;
+}
+.ppt-title {
+    position: absolute;
+    top: 0;
+    left: 1em;
 }
 </style>
