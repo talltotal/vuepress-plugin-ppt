@@ -175,6 +175,6 @@ export default {
 .ppt-title {
     position: absolute;
     top: 0;
-    left: 1em;
+    left: 20px;
 }
 </style>
